@@ -3,7 +3,7 @@ var React = require('react');
 var Main = React.createClass({
   render: function(){
     return (
-      <div>
+      <div className="main-container">
         <h1>Weather App</h1>
         <ul>
           <li>Home</li>
@@ -14,6 +14,6 @@ var Main = React.createClass({
       </div>
       )
   }
-})
+});
 
 module.exports = Main;
