@@ -4,7 +4,7 @@
   "description": "Curriculum for React.js Program's React Fundamentals course.",
   "main": "index.js",
   "scripts": {
-    "production":"webpack -p",
+    "production": "webpack -p",
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,8 @@
   "homepage": "https://github.com/ReactjsProgram/react-fundamentals-curriculum#readme",
   "dependencies": {
     "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "react-dom": "^15.4.0",
+    "react-router": "^2.0.0-rc5"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
