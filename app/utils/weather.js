@@ -7,9 +7,9 @@ var APIKEY = '9cecc6b72c2a20f9f6ac913d1daf6fd8'
 
 function getCityWeather(cityname) {
   return axios.get(BASEURL + "weather?q=" + cityname + "&type=accurate&APPID=9cecc6b72c2a20f9f6ac913d1daf6fd8").then(function (currentWeatherData) {
-      console.log(currentWeatherData.data)
+      return currentWeatherData.data
     }).catch(function(error){
-      console.log(error)
+      console.log("There was an error", error)
     })
   }
 
@@ -17,7 +17,7 @@ function getCityWeather(cityname) {
 function getCityForecast(cityname) {
   return axios.get(BASEURL + "forecast/daily?q=" + cityname + "&type=accurate&APPID=9cecc6b72c2a20f9f6ac913d1daf6fd8&cnt=5")
   .then(function(currentForecastData){
-    console.log(currentForecastData.data)
+    return currentForecastData.data
   })
 }
 
