@@ -1,29 +1,39 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
+var GetCityContainer = require('../containers/GetCityContainer');
 
 var styles = {
   container: {
-    background: 'url(app/images/pattern.svg)',
-    height: '587px'
+    backgroundImage: "url('app/images/pattern.svg')",
+    backgroundSize: 'cover',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '94vh'
+  },
+  form: {
+
+  },
+  button: {
+
+  },
+  header: {
+    fontSize: 45,
+    color: '#fff',
+    fontWeight: 100
   }
 };
 
-var Home = React.createClass({
-  render: function(){
-    return (
-      <div style={styles.container}>
-        <form>
-          <div className="form-group">
-            <input className="form-control" placeholder="Form object" type="text" />
-          </div>
-          <div className="form-group col-sm-4 col-sm-offset-4">
-            <button className="btn btn-block btn-success" type="submit">
-              Button
-            </button>
-          </div>
-        </form>
-      </div>
-      )
-  }
-});
+function Home(props){
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.header}>Enter a City and State</h1>
+      <GetCityContainer />
+    </div>
+  )
+}
+
 
 module.exports = Home;
+
