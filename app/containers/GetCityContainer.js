@@ -3,6 +3,10 @@ var GetCity = require('../components/GetCity');
 var weatherHelpers = require('../utils/weather');
 
 var GetCityContainer = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   getInitialState: function(){
     return {
       city: ''
@@ -21,7 +25,7 @@ var GetCityContainer = React.createClass({
       this.setState({
       city: ''
     });
-    weatherHelpers.getCityWeather(city)
+    this.context.router.push('forecast/' + city)
 
   },
 
