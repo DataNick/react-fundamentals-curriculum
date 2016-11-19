@@ -29,10 +29,6 @@ var GetCityContainer = React.createClass({
 
   },
 
-  componentDidMount: function(){
-
-    console.log(this.props.location)
-  },
 
   render: function(){
     return (
